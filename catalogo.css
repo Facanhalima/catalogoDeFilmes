@@ -1,0 +1,155 @@
+.borda{
+
+    border: 5px solid blue;
+
+}
+
+.maior16, .maior18, .livre{
+
+    height: 20px;
+    padding: 20px;
+    margin: 0;
+    align-self: flex-start;
+    margin-left: 25px;
+
+}
+
+.estrela{
+
+    display: block;
+    position:  relative;
+    align-self: center;
+    right: 90%;
+    margin-bottom: 100px;
+    margin-left: 2px;
+
+}
+
+.amarelo{color: yellow;}
+.cinza{color: gray;}
+
+.maior18{background: red;}
+.maior16{background: yellow;}
+.livre{background: rgb(48, 131, 247);}
+
+.fundo{
+
+    background: white;
+
+}
+
+header, main, footer{
+
+    background: gray;
+
+}
+
+header{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+
+}
+
+header h1{
+
+    margin-top: 20px;
+    margin-bottom: 100px;
+
+}
+
+main{
+
+    width: 100%;
+    height: auto;
+
+}
+
+.catalogo{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 96%;
+    height: auto;
+    margin: 0;
+    margin-left: 2%;
+
+}
+
+.boxes{
+
+    margin: 0;
+    width: 45%;
+    height: 500px;
+    margin-left: 3.5%;
+    background: white;
+
+}
+
+.imagemFilme{
+
+    display: flex;
+    width: 150px;
+    height: 150px;
+    align-self: baseline;
+    margin: 0;
+
+}
+
+.cantoDireito{
+
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+
+}
+
+.cartaz-classificacao{
+
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    height: auto;
+
+}
+
+.classificacao p{
+
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+
+}
+
+.cartaz{
+
+    display: inline-block;
+    width: 400px;
+    margin: 0;
+    
+    
+
+}
+
+.cartaz-resumo{
+
+    margin: 0;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10%;
+
+}
+
+.cartaz-titulos-similares{
+
+    background: white;
+    margin: 0;
+    margin-top: 40px;
+
+
+}
