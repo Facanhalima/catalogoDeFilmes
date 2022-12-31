@@ -81,7 +81,7 @@ const montarCatalogo = (filme) =>
         <div class="cantoDireito">
 
             <img src="${filme.figura}" alt="#" class="imagemFilme">
-            <div class="cartaz borda">
+            <div class="cartaz ">
 
                 <h3 class="titulo">${filme.titulo}</h3>
                 <p class="generos">${filme.generos}</p>
