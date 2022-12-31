@@ -1,4 +1,5 @@
 const xhttp = new XMLHttpRequest()
+const jsonString = "https://rafaelescalfoni.github.io/desenv_web/filmes.json"
 
 const faixaEtaria = classificacao =>{
 
@@ -20,8 +21,6 @@ const faixaEtaria = classificacao =>{
 const nota = rating =>{
 
     JSON.stringify(rating)
-
-    console.log(rating)
     
     const tamanho = rating.length;
     let armazena = new String()
@@ -31,7 +30,6 @@ const nota = rating =>{
         
         armazena = rating[i].rating
         converte += parseInt(armazena)
-        console.log(converte)
         
     }
 
@@ -64,9 +62,7 @@ const nota = rating =>{
                          <span class="glyphicon glyphicon-star estrela amarelo"></span>
                          <span class="glyphicon glyphicon-star estrela"></span>`;
                          
-        default: 
-        console.log(rating);
-        return ` <span class="glyphicon glyphicon-star estrela amarelo"></span>
+        default: return ` <span class="glyphicon glyphicon-star estrela amarelo"></span>
                          <span class="glyphicon glyphicon-star estrela amarelo"></span>
                          <span class="glyphicon glyphicon-star estrela amarelo"></span>
                          <span class="glyphicon glyphicon-star estrela amarelo"></span>
@@ -74,6 +70,29 @@ const nota = rating =>{
                         
 
     }
+
+}
+
+titulosSimilares = similares =>{
+
+    const requisicao = fetch(JSON.parse(JSON.stringify(jsonString)))
+    const dados = JSON.parse(requisicao.responseText) 
+    console.log(dados)
+    
+    const tamanho = similares.length
+    const objeto = dados.id;
+    let imagemFilme
+    let acumulador
+    
+    for(i = 0; i < tamanho; i++){
+        
+        imagemFilme = objeto.similares[i]
+        acumulador += `<img src="${imagemFilme.figura}" alt="#" class="imagemFilme">`
+
+    }
+
+
+    return acumulador
 
 }
 
@@ -141,6 +160,6 @@ xhttp.onreadystatechange = function(){
 
 }
 
-xhttp.open("GET", "https://rafaelescalfoni.github.io/desenv_web/filmes.json")
+xhttp.open("GET", jsonString)
 
 xhttp.send()
