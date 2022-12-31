@@ -76,9 +76,9 @@ const imagemSimilares = id =>{
 const montarCatalogo = (filme) => 
     `
 
-    <article class="boxes borda">
+    <article class="boxes">
 
-        <div class="cantoDireito borda">
+        <div class="cantoDireito">
 
             <img src="${filme.figura}" alt="#" class="imagemFilme">
             <div class="cartaz borda">
@@ -89,7 +89,7 @@ const montarCatalogo = (filme) =>
 
             </div>
 
-            <aside class="cartaz-classificacao borda">
+            <aside class="cartaz-classificacao">
 
                 ${faixaEtaria(filme.classificacao)}
                 ${nota(filme.rating)}
