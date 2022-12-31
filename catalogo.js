@@ -21,7 +21,23 @@ const nota = rating =>{
 
     JSON.stringify(rating)
 
-    switch(rating){
+    console.log(rating)
+    
+    const tamanho = rating.length;
+    let armazena = new String()
+    let converte = new Number()
+    
+    for(i = 0; i<tamanho; i++){
+        
+        armazena = rating[i].rating
+        converte += parseInt(armazena)
+        console.log(converte)
+        
+    }
+
+    converte = (converte / tamanho)
+
+    switch(armazena){
 
         case 1: return ` <span class="glyphicon glyphicon-star estrela amarelo"></span>
                          <span class="glyphicon glyphicon-star estrela"></span>
@@ -61,18 +77,6 @@ const nota = rating =>{
 
 }
 
-const exibirSimilares = id => JSON.stringify(`${id.figura}`)
-
-const imagemSimilares = id =>{
-
-    id.forEach(imagem =>{
-
-        return exibirSimilares(id)
-
-    })
-
-}
-
 const montarCatalogo = (filme) => 
     `
 
@@ -92,7 +96,7 @@ const montarCatalogo = (filme) =>
             <aside class="cartaz-classificacao">
 
                 ${faixaEtaria(filme.classificacao)}
-                ${nota(filme.rating)}
+                ${nota(filme.opinioes)}
 
             </aside>
 
@@ -106,7 +110,7 @@ const montarCatalogo = (filme) =>
         
         <footer class="cartaz-titulos-similares">
             <p>Titulos Similares:</p>
-            ${imagemSimilares(filme.titulosSemelhantes)}
+            ${filme.titulosSemelhantes}
         
         </footer>
 
